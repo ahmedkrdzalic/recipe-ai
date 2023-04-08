@@ -13,6 +13,7 @@ function TagInput({ inputRef, handleKeyDown }: TagInputProps) {
       type="text"
       placeholder="Type something"
       id="tag-input"
+      list="ingredients"
       className="border-none outline-none bg-transparent text-black"
     />
   );
