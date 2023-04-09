@@ -1,9 +1,12 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import TagsInput from "@/components/tags/TagsInput";
+import RecipeGenerator from "@/components/pageParts/RecipeGenerator";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata = {
+  title: "AI Recipe Generator",
+};
 
 export default function Home() {
   return (
@@ -14,29 +17,9 @@ export default function Home() {
           <h3 className="text-md">Taste the magic!</h3>
           <hr className="mt-2 h-2" />
         </div>
-        <div className="py-4">
-          <div className="mb-4">
-            <h2 className="text-2xl">1. Select ingredients!</h2>
-            <div className="text-sm px-4 flex flex-col font-thin">
-              <div>
-                <span>
-                  {
-                    "Add all ingredients you want. (Ex. select ones that you have at home.)"
-                  }
-                </span>
-              </div>
-              <TagsInput />
-            </div>
-          </div>
-          <div>
-            <h2 className="text-2xl">2. Select option</h2>
-          </div>
-          <div>
-            <h2 className="text-2xl">3. Generate</h2>
-          </div>
-        </div>
+        <RecipeGenerator />
       </div>
-      <div className="text-center">
+      <footer className="text-center mt-6">
         <h3 className="text-xs">
           Created by{" "}
           <Link
@@ -48,7 +31,7 @@ export default function Home() {
           </Link>
         </h3>
         <h3>© 2023 Copyright</h3>
-      </div>
+      </footer>
     </main>
   );
 }

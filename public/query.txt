@@ -1,0 +1,15 @@
+1. Return a vegetarian recipe using some or all ingredients provided. Return the whole recipe in the JSON format with fields: name: string (recipe name), ingredients: {name: string, amount: string}[], instructions: string[], note: string (if you have any notes regarding this query). 
+ingredients: paprika, carrots, potato, olive oil, peanuts, soybeans, chicken breasts, cucumber, tomato
+1.2 `Return a ${
+    option === "Vegan" || option === "Vegetarian" ? option : ""
+  } recipe using some or all ingredients provided. Return the whole recipe in the JSON format with fields: name: string (recipe name), ingredients: {name: string, amount: string}[], instructions: string[], note: string (if you have any notes regarding this query). 
+    ingredients: ${ingredients.join(", ")}`
+
+
+2. Return a vegetarian recipe using some or all ingredients provided. Return should consist of these fields: name: string (recipe name), ingredients: {name: string, amount: string}[], instructions: string[], note: string (any notes that are not meant for other fields). 
+ingredients: paprika, carrots, potato, olive oil, peanuts, soybeans, chicken breasts, cucumber, tomato
+
+2.2 `Return a ${
+    option === "Vegan" || option === "Vegetarian" ? option : ""
+  } recipe using some or all ingredients provided. Return should consist of these fields: name: string (recipe name), ingredients: {name: string, amount: string}[], instructions: string[], note: string (any notes that are not meant for other fields). 
+ingredients: ${ingredients.join(", ")}`;
